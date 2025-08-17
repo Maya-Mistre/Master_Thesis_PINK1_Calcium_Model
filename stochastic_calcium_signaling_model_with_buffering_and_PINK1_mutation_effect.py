@@ -44,23 +44,7 @@ lmda = float(sys.argv[5])
 
 ic = 'no'
 ss = 'no'
-##### Original MUTATION method
-#is_pink1_mutant = True  # Set to False for WT, True for PINK1 mutant
-#mutation_scale = 0.5 if is_pink1_mutant else 1.0  # PINK1 effect
-#pink1 altered parameters
-#psi0 = 160. * mutation_scale  # Reduced Δψ in PINK1 mutant
-#vuni = 0.300 * mutation_scale        # reduced MCU Ca²⁺ uptake
-#vncx = 2.e-3 * (2. - mutation_scale) # increased Ca²⁺ extrusion via NCX
-#rhores = 1.00 * mutation_scale       # reduced respiratory capacity
-#rhof1 = 0.23 * mutation_scale        # reduced ATP synthase activity
 
-###NEW Mutation method- range of mutation scale
-
-# Name of the output file
-#foldername = '/media/vvoorslu/LaCie/20230110/'          #+run
-#filename = 'ip3_'+str('%.6f_' % (ip3))+'accoa_'+str('%.2e_' % (accoa))+'N_'+str('%03d_' % (N))+'lambda_'+str('%.2f' % lmda)+'.hdf5'
-
-#if os.path.isfile(filename): os.remove(filename)
 
 def fluxes(v):
         v = v[:18]  # Ignore CaB (buffer) for Gibbs energy calculations
